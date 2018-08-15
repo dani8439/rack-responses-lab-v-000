@@ -3,6 +3,8 @@ class Application
     resp = Rack::Response.new
 
     t = Time.now
+    # returns => 2018-8-15 12:52:20 -600 
+    # t.hour parses out the hour
 
     if t.hour < 12 
       resp.write "Good Morning!"
