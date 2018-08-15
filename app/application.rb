@@ -4,7 +4,7 @@ class Application
 
     t = Time.now
     # returns => 2018-8-15 12:52:20 -600 
-    # t.hour parses out the hour
+    # t.hour parses out the hour -- no need to convert .to_i
 
     if t.hour < 12 
       resp.write "Good Morning!"
@@ -17,22 +17,3 @@ class Application
 end
 
 
-# class Application
-#
-#   def call(env)
-#     resp = Rack::Response.new
-#
-#     num_1 = Kernel.rand(1..20)
-#     num_2 = Kernel.rand(1..20)
-#     num_3 = Kernel.rand(1..20)
-#
-#     if num_1==num_2 && num_2==num_3
-#       resp.write "You Win"
-#     else
-#       resp.write "You Lose"
-#     end
-#
-#     resp.finish
-#   end
-#
-# end
